@@ -92,8 +92,8 @@ function render(grid) {
     }
 
     if (path.length > 0) {
-        //Check passed nodes and if they are in the path array delete them. 
-        //After that "move back" (change x or y coordinates) if no other child or sibling nodes fined
+        //Check passed nodes in the path array and delete them. 
+        //After that "move back" (change x or y coordinates) if no other child or sibling nodes found
         if (path[path.length - 1]["data"] === grid.data) {
             if (Object.values(path[path.length - 1]).indexOf("child") !== -1) {
                 y -= step;
